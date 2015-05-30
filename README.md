@@ -24,10 +24,10 @@ Database: Mysql 5.x or latest version
 </Service>
 ```
 ## MySQL
-依照需求請自建MySQL的帳號與密碼，詳細請參考[MySQL Document](http://dev.mysql.com/doc/)，帳號建立完成後，請建立資料庫，名為PLWeb，之後將[Schema](https://github.com/tungshuan/PLWeb/blob/master/plweb.sql)匯入。
+依照需求請自建MySQL的帳號與密碼，詳細請參考[MySQL Document](http://dev.mysql.com/doc/)，帳號建立完成後，請建立資料庫，名為PLWeb，之後將[Schema](https://github.com/AbnerLin/PLWeb/blob/master/plweb.sql)匯入。
 
 ##Deploy
-Tomcat與MySQL都設定完成後，將[ROOT.war](https://github.com/tungshuan/PLWeb/blob/master/ROOT.war)複製至Tomcat的網頁資料夾處(預設為/var/lib/tomcat/webapps/)，並修改tomcat的資料庫設定檔(預設為/var/lib/tomcat/conf/Catalina/localhost/ROOT.xml)，都設定完成後，重啟Tomcat，即完成。
+Tomcat與MySQL都設定完成後，將[ROOT.war](https://github.com/AbnerLin/PLWeb/blob/master/ROOT.war)複製至Tomcat的網頁資料夾處(預設為/var/lib/tomcat/webapps/)，並修改tomcat的資料庫設定檔(預設為/var/lib/tomcat/conf/Catalina/localhost/ROOT.xml)，都設定完成後，重啟Tomcat，即完成。
 
 * ROOT.xml範例，還須依照環境需求修改。
 ```
