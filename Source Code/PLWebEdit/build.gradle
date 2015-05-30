@@ -1,0 +1,48 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+version = '1.0'
+description = ''
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	groovy 'org.codehaus.groovy:groovy-all:1.8.6'
+
+    compile 'commons-lang:commons-lang:2.6'
+    //compile 'commons-io:commons-io:2.1'
+    //compile 'commons-httpclient:commons-httpclient:3.1'
+    //compile 'org.apache.ant:ant:1.8.2'
+
+    // PLWeb Libraries
+    compile files ('../PLWebXML/build/libs/plwebxml-1.0.jar')
+    
+    compile files ('../PLWebStart/lib/jedit.jar')
+    compile files ('../PLWebStart/lib/DJNativeSwing.jar')
+    compile files ('../PLWebStart/lib/DJNativeSwing-SWT.jar')
+	compile files ('../PLWebStart/lib/commons-codec-1.9.jar')
+	compile files ('../PLWebStart/lib/json-simple-1.1.1.jar')
+}
+
+def defaultEncoding = 'UTF-8'
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.groovyOptions*.encoding = defaultEncoding
+
+// Package Fat Jar
+jar.baseName = 'plwebedit'
+
+task deploy(dependsOn: 'jar') << {
+    ant.copy(file: jar.archivePath, todir: '../PLWebStart/plwebstart/plugins')
+    ant.copy(file: jar.archivePath, todir: '../PLWebApp/src/main/webapp/plwebstart/plugins')
+}
+
+defaultTasks 'deploy'
+

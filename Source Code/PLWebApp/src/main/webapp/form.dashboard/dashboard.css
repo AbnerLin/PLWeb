@@ -1,0 +1,37 @@
+.panel-class-list-normal {
+}
+
+.panel-lesson-show-lesson {
+	padding: 10px;
+}
+
+.content-left {
+	float: left;
+}
+
+.content-left-inner {
+	width: 300px;
+}
+
+.expand .content-left-inner {
+
+}
+
+.content-center {
+	
+}
+
+.content-center-inner {
+	margin-left: 320px;
+}
+
+.expand .content-center-inner {
+	margin-left: 0;
+}
+
+.content-dashboard-desc {
+	color: #aaaaaa;
+	text-align: center;
+	font-size: 13px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}

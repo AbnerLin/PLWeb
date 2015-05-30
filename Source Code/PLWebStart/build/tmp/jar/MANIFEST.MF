@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: PLWebStart
+Implementation-Version: 1.0
+Main-Class: org.plweb.suite.webstart.RunEditor
+

@@ -1,0 +1,89 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+version = '1.0'
+description = ''
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	groovy 'org.codehaus.groovy:groovy-all:1.8.6'
+
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'commons-io:commons-io:2.1'
+    compile 'commons-httpclient:commons-httpclient:3.1'
+    compile 'org.apache.ant:ant:1.8.2'
+
+    // PLWeb Libraries
+    compile files ('../PLWebXML/build/libs/plwebxml-1.0.jar')
+    
+    runtime 'gnu-regexp:gnu-regexp:1.1.4'
+
+    compile files ('lib/jedit.jar')
+    compile files ('lib/DJNativeSwing.jar')
+    compile files ('lib/DJNativeSwing-SWT.jar')
+	
+    //providedRuntime files ('lib/swt-3.7.1-macosx-x86_64.jar')
+}
+
+def defaultEncoding = 'UTF-8'
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.groovyOptions*.encoding = defaultEncoding
+
+jar.baseName = 'plwebstart'
+jar {
+	//from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } }
+    //exclude('META-INF/*.txt')
+	manifest {
+		attributes 'Implementation-Title': 'PLWebStart', 'Implementation-Version': version, 'Main-Class' : 'org.plweb.suite.webstart.RunEditor'
+	}
+}
+
+task libs() {
+    configurations.runtime.each {
+        src ->
+        if (!src.name.startsWith(jar.baseName)) {
+            ant.copy(file: src, todir: ".${File.separator}plwebstart${File.separator}libs")
+            ant.signjar(alias: 'plweb', keystore: 'keystore', keypass: 'plwebkey', storepass: 'plwebkey', preservelastmodified: 'true', jar: ".${File.separator}plwebstart${File.separator}libs${File.separator}${src.name}")
+        }
+    }
+}
+
+task deploy(dependsOn: 'jar') << {
+    ant.copy(file: jar.archivePath, todir: ".${File.separator}plwebstart${File.separator}core")
+    ant.signjar(alias: 'plweb', keystore: 'keystore', keypass: 'plwebkey', storepass: 'plwebkey', preservelastmodified: 'true', jar: ".${File.separator}plwebstart${File.separator}core${File.separator}${jar.archivePath.name}")
+
+    ant.copy(todir: '../PLWebApp/src/main/webapp/plwebstart') {
+        fileset (dir: 'plwebstart', includes: '**/*.jar')
+        fileset (dir: 'plwebstart', includes: '**/*.zip')
+    }
+}
+
+jar.dependsOn 'native2ascii'
+
+task native2ascii << {
+	ant.delete() {
+		fileset(dir: "${processResources.destinationDir}") {
+			include(name: 'Messages*.properties')
+		}
+	}
+	ant.native2ascii(src: 'src/main/resources/',
+			dest: "${processResources.destinationDir}",
+			includes: '**/Messages*.properties',
+			encoding: 'UTF-8')
+}
+
+task sync(type:Exec) {
+    workingDir '.'
+    commandLine 's3cmd', '-P', 'sync', './plwebstart', 's3://cdn.plweb.org/'
+}
+
+defaultTasks 'deploy'

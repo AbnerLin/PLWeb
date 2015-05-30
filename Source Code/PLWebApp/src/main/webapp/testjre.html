@@ -1,0 +1,10 @@
+<script 
+src="deployJava.js"></script>
+<p>
+Detected JREs: <b>
+<script>
+jres = deployJava.getJREs();
+document.writeln(jres.length ? jres : "None");
+</script>
+</b>
+</p>

@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	groovy 'org.codehaus.groovy:groovy-all:1.8.6'
+	testCompile 'org.spockframework:spock-core:0.5-groovy-1.8'
+}
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+version = '1.0'
+
+jar.baseName = 'plwebxml'
+
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'PLWebXML API', 'Implementation-Version': version
+	}
+}
+
+defaultTasks 'jar'
+
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}
+
+

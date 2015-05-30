@@ -1,0 +1,58 @@
+.panel-navigation-page-header .logo {
+	float: left;
+}
+
+.panel-navigation-page-header .form-links {
+	float: left;
+	margin-left: 20px;
+	padding-top: 15px;
+}
+
+.panel-navigation-page-header .form-links ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.panel-navigation-page-header .form-links li {
+	margin:0;
+	padding:0;
+	float: left;
+	margin-right: 10px;
+}
+
+.panel-navigation-page-header .form-links a.link-item {
+	color: #dddddd;
+	display: table-cell;
+	vertical-align: middle;
+	width: 119px;
+	height: 41px;
+	text-align:center;
+	font-family: Arial;
+	font-size: 18x;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #23435F;
+	background-image: url('../img/plweb_topnav_bg.png');
+}
+
+.panel-navigation-page-header .form-links a.link-item:hover {
+	color: #ffffff;
+	background-color: #3F617F;
+	background-image: url('../img/plweb_topnav_bg_hover.png');
+}
+
+.panel-navigation-page-header .top-links {
+	float: right;
+	font-size: 13px;
+	color: #bbbbbb;
+	width: 550px;
+	text-align: right;
+}
+
+.panel-navigation-page-header .top-links a {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #eeeeee;
+}

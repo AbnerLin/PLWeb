@@ -1,0 +1,29 @@
+body {
+	background-color: #444444;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+.plweb-schedule-Book {
+	float: left;
+	margin: 10px;
+	width: 160px;
+	height: 125px;
+}
+
+.plweb-schedule-BookImage {
+	text-align: center;
+}
+.plweb-schedule-BookImage img {
+	border: 0;
+	background-color: #ffffff;
+	padding: 1px;
+}
+
+.plweb-schedule-BookCaption {
+	text-align: center;
+	overflow: hidden;
+	color: #aaaaaa;
+	padding: 2px;
+}

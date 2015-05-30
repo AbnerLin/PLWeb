@@ -1,0 +1,19 @@
+.title01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #009966;
+}
+.title02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3366CC;
+	font-weight: bold;
+}
+td {
+	line-height: 150%;
+}
+
+.indent-text1 {
+	padding-left: 30px;
+}

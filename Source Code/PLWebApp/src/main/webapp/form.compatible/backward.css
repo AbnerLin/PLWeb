@@ -1,0 +1,19 @@
+.panel-class-list-normal {
+}
+
+.panel-lesson-show-lesson {
+	padding: 10px;
+}
+
+.content-left {
+	float: left;
+	width: 300px;
+}
+
+.content-center {
+	margin-left: 320px;
+}
+
+.content iframe {
+	border: 0;
+}

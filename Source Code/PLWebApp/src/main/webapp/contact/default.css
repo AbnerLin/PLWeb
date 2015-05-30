@@ -1,0 +1,221 @@
+body {
+	padding: 10px;
+	margin: 10px;
+	font-size: 13px;
+}
+
+body.top {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-image: url('Images/back.jpg');
+}
+
+div.navbar {
+	height: 26px;
+	padding: 3px;
+	text-align: right;
+}
+
+div.navbar a {
+	margin-left: 5px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #444444;
+}
+
+div.navbar a:hover {
+	background-color: #ddddff;
+	text-decoration: none;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+table td {
+	padding: 5px;
+}
+
+table th {
+	font-size: 15px;
+	background-color: #333333;
+	color: #ffffff;
+	padding: 5px 0;
+}
+
+table th.small {
+	font-size:13px;
+	font-weight:normal;
+}
+
+table th.verticle {
+	background-color: #cccccc;
+	color: #000000;
+	padding: 2px;
+}
+
+table td {
+	font-size: 15px;
+	background-color: #eeeeee;
+}
+
+table td.small {
+	font-size:13px;
+}
+
+.left-menu {
+	font-size: 13px;
+}
+
+.left-menu span {
+	color: gray;
+}
+
+.left-menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.left-menu li {
+	list-style: none;
+	margin-left: 0;
+	margin-bottom: 5px;
+}
+
+.left-menu li span {
+	padding-left: 16px;
+}
+
+.left-menu li a {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.left-menu li a:hover {
+	text-decoration: none;
+	background-color: #ffffaa;
+}
+
+.left-menu li a span {
+	color: blue;
+	padding-left: 0;
+}
+
+div.light-color {
+	text-align: right;
+}
+
+div.light-color span {
+	font-size: 13px;
+}
+
+table.classroom-report,table.classroom-report tr,table.classroom-report td,table.classroom-report th
+	{
+	background-color: transparent;
+}
+
+table.classroom-report {
+	border: 1px solid #888888;
+}
+
+table.classroom-report tr,table.classroom-report td,table.classroom-report th {
+	border: 1px solid #CCCCCC;
+}
+
+.alert_message {
+	color: #0000FF;
+	border: 1px solid #0000FF;
+	font: weight;
+	padding: 5px;
+	background: #DDDDFF;
+}
+
+.error_message {
+	color: #FF0000;
+	border: 1px solid #FF0000;
+	font: weight;
+	padding: 5px;
+	background: #FFDDDD;
+}
+
+div.welcome {
+	color: #666666;
+	font-size: 11px;
+	font-family: Arial;
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+
+div.top {
+	display: block;
+	height: 120px;
+	overflow: hidden;
+}
+
+.light {
+	font-size:14px;
+}
+
+a img, img.icon {
+	vertical-align: middle;
+}
+
+a.JREsVersionWrapper {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+a.icon {
+	text-decoration:none;
+}
+a.icon:hover {
+	text-decoration:none;
+}
+
+.top-back {
+	background:url('Images/back001.jpg') repeat-x;
+	background-position: 0 -45px;
+}
+.top-logo {
+	background:url('Images/topmenu_06.gif') no-repeat;
+	background-position: 0 -15px;
+	height:100px;
+}
+
+.odd td {
+	background-color: #eeeeee;
+}
+
+.even td {
+	background-color: #dddddd;
+}
+
+marquee.announce {
+	font-size: 13px;
+}
+
+.book-catalog h3 {
+	cursor: pointer;
+}
+
+.book-catalog h3:hover {
+	background-color: #ffffaa;
+}
+
+.book-catalog-other {
+	display: none;
+}
+
+textarea.big_text, input.big_text {
+	font-size: 16px;
+}
+textarea.max_width, input.max_width {
+	width: 100%;
+}

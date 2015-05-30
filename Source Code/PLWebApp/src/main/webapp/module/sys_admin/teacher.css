@@ -1,0 +1,16 @@
+div#sys_admin-teacher-container table th {
+	text-align: center;
+	padding: .5em;
+}
+
+div#sys_admin-teacher-container table td {
+	padding: .5em;
+}
+
+div#sys_admin-teacher-container table th {
+	background-color: #aaaaaa;
+}
+
+div#sys_admin-teacher-container table tr.odd {
+	background-color: #eeeeee;
+}

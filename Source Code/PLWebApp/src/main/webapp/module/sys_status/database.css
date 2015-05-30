@@ -1,0 +1,8 @@
+#sys_status-database-container table th {
+	text-align: right;
+	padding: .5em;
+}
+
+#sys_status-database-container table td {
+	padding: .5em;
+}

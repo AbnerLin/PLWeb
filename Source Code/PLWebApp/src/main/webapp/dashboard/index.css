@@ -1,0 +1,92 @@
+/* layout */
+.content-wrapper {
+	padding:0;
+	margin:0;
+}
+.content-left {
+	float: left;
+	width: 300px;
+}
+.content-left-inner {
+    	padding: 20px 0 0 10px;
+}
+.content-center {
+	margin-left: 300px;
+}
+.content-center-inner {
+    	padding: 30px 30px 30px 0;
+}
+.content-footer {
+	clear: both;
+	padding: .5em;
+	text-align: center;
+	font-size: .75em;
+	color: #8a8a8a;
+	border-top:1px solid #dadada;
+}
+
+/* class list menu */
+ul.classMenu {
+	list-style: none;
+	margin: 0;
+	padding: 1em;
+}
+.classMenu li {
+	margin-bottom: 8px;
+	margin-top: 2px;
+	border-bottom: 1px solid #cacaca;
+}
+.classMenu a {
+	color: #0000ff;
+	font-size: 15px;
+	font-weight: bold;
+}
+.classMenu .classId {
+	font-size: 11px;
+}
+.classMenu .classInfo {
+	font-size: 11px;
+	color: #7a7a7a;
+}
+
+/* lesson list menu */
+ul.lessonMenu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.lessonMenu li {
+	padding: 5px;
+}
+.lessonMenu a.lessonTitle {
+	font-weight: bold;
+	font-size: 15px;
+}
+.lessonMenu .courseTitle {
+	font-size: 11px;
+	color: #aaaaaa;
+}
+
+/* style */
+.content-left h1 {
+	font-size: 13px;
+	color: #555555;
+	line-height: 1em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.classTable th {
+	font-size: 13px;
+	color: #333333;
+	text-align: left;
+}
+.classTable td {
+	font-size: 15px;
+	color: #333333;
+}
+
+span.hide-students {
+	display: none;
+}

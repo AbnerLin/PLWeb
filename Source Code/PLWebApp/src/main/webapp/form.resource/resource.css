@@ -1,0 +1,134 @@
+.panel-class-list-normal {
+}
+
+.panel-lesson-show-lesson {
+	padding: 10px;
+}
+
+.content-left {
+	float: left;
+}
+
+.content-left-inner {
+	width: 300px;
+}
+
+.expand .content-left-inner {
+
+}
+
+.content-center {
+	
+}
+
+.content-center-inner {
+	margin-left: 320px;
+}
+
+.expand .content-center-inner {
+	margin-left: 0;
+}
+
+.content-dashboard-desc {
+	color: #aaaaaa;
+	text-align: center;
+	font-size: 13px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.ajax-resource-list ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.ajax-resource-list li {
+	margin:1px;
+	padding:5px;
+	background-color: #0e6e7b;
+	cursor: pointer;
+}
+
+.ajax-resource-list li:hover {
+	background-color: #108ca5;
+}
+
+.ajax-resource-list li img {
+	vertical-align: middle;
+}
+
+.ajax-resource-list li .title {
+	font-family: Times, 'Times New Roman', Georgia, serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.ajax-resource-list li .num {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 11px;
+	color: #14c7eb;
+}
+
+.ajax-resource-load ul.root {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.ajax-resource-load li.chapter {
+	margin:5px 0;
+	padding:5px;
+	border-bottom: 1px solid #cccccc;
+}
+
+.ajax-resource-load li.chapter.selected {
+	background-color: #f1f1db;
+}
+
+.ajax-resource-load li.chapter .title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #f8630f;
+	cursor: pointer;
+}
+
+.ajax-resource-load li.chapter .title:hover {
+	color: #5f4d20;
+	background-color: #d4ccae;
+}
+
+.ajax-resource-load li.chapter .chapter-footer {
+	color: #666666;
+	font-size: 13px;
+	padding: 5px;
+}
+
+li.chapter .chapter-content {
+	display: none;
+	background-color: #ffffff;
+	padding: .5em;
+	margin: 5px;
+}
+
+li.chapter .chapter-attribute {
+	display: none;
+}
+
+li.chapter .chapter-html-string {
+	font-size: 15px;
+}
+
+li.chapter .chapter-html-panel {
+	display: none;
+}
+
+li.chapter .chapter-import-iframe {
+	width: 100%;
+	height: 300px;
+	border: 0;
+}
+
+.resource-header .resource-title {
+	font-size: 22px;
+}

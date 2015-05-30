@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+version = '1.0'
+description = ''
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	groovy 'org.codehaus.groovy:groovy-all:1.8.6'
+
+    runtime 'mysql:mysql-connector-java:5.1.18'
+    
+    //compile 'commons-lang:commons-lang:2.6'
+    //compile 'commons-io:commons-io:2.1'
+    //compile 'commons-httpclient:commons-httpclient:3.1'
+    //compile 'org.apache.ant:ant:1.8.2'
+
+    // PLWeb Libraries
+    compile files('../PLWebXML/build/libs/plwebxml-1.0.jar')
+}
+
+def defaultEncoding = 'UTF-8'
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.groovyOptions*.encoding = defaultEncoding
+
+task runScript << {
+    new GroovyShell().run(file('scripts/main.groovy')) 
+}
+
+defaultTasks 'runScript'

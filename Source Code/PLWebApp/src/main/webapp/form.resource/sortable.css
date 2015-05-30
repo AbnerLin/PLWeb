@@ -1,0 +1,25 @@
+ul.sortable-chapters {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+ul.sortable-chapters li {
+	font-size: 13px;
+	padding: 5px;
+	margin: 1px;
+	cursor: move;
+	background-color: #ECF1E3;
+}
+
+ul.sortable-chapters li.changed {
+	background-color: #D3DA14;
+}
+
+span.changed-hints {
+	display:none;
+	padding:2px;
+	background-color:#D3DA14;
+	color:#333333;
+	font-size:11px;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+      name="jdbc/plweb"
+      auth="Container"
+      type="javax.sql.DataSource"
+      username=""
+      password=""
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost/plweb?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;autoReconnectForPools=true"
+      testOnBorrow="true"
+      testOnReturn="true"
+      validationQuery="SELECT 1"
+      maxActive="200"
+      maxIdle="100"
+      maxWait="-1"
+      initialSize="10"
+      minEvictableIdleTimeMillis="600000"
+      timeBetweenEvictionRunsMillis="600000"
+      removeAbandoned="true"
+      removeAbandonedTimeout="60"
+      logAbandoned="true"
+    />
+</Context>

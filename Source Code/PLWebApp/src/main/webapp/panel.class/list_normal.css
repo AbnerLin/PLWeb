@@ -1,0 +1,102 @@
+.panel-class-list-normal {
+}
+
+.panel-class-list-normal ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.panel-class-list-normal li {
+	display: block;
+	background-color: #e6e2d2;
+	margin: 0;
+	padding: 0;
+}
+
+.panel-class-list-normal li a {
+	text-decoration: none;
+	display: block;
+	background-color: #9e8f6a;
+	padding: 5px 5px 5px 10px;
+	margin-bottom: 2px;
+	font-size: 15px;
+	font-weight: normal;
+	color: #3b230d;
+}
+
+.panel-class-list-normal li .description {
+	display: block;
+	font-size: 13px;
+	color: #887e7e;
+	padding: 5px 0;
+	padding-left: 20px;
+}
+
+.panel-class-list-normal li a.selected {
+	color: #fff9f3;
+	background-color: #307072;
+	font-weight: bold;
+}
+
+.panel-class-list-normal li a .footprint {
+	display: block;
+	float: right;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.panel-class-list-normal li li {
+	display: block;
+	background-color: #f9f9f9;
+	padding: 0 20px;
+	margin: 0;
+	margin: 1px;
+	cursor: pointer;
+}
+
+.panel-class-list-normal li li:hover {
+	background-color: #e9e9a6;
+}
+
+.panel-class-list-normal li li.selected {
+	background-color: #d47b2b;
+}
+
+.panel-class-list-normal li li a {
+	color: #3b230d;
+	display: inline;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.panel-class-list-normal li li a.selected {
+	color: #000000;
+	background-color: transparent;
+}
+
+.panel-class-list-normal li li .title {
+	color: #3b230d;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.panel-class-list-normal li li.selected .title {
+	color: #000000;
+}
+
+.panel-class-list-normal li li .description {
+	display: block;
+	color: #916302;
+	font-size: 13px;
+	padding: 0;
+	margin: 0;
+}
+
+.panel-class-list-normal li li.selected .description {
+	color: #fff9f3;
+}

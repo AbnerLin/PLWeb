@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PLWeb使用手冊-教材製作</title>
+<style type="text/css">
+<!--
+.style1 {font-size: 16px}
+.style2 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<table width="780" border="0" align="center" style="border:3px dashed #490;">
+  <tr class="style1">
+    <td height="56" colspan="4"><p>PLWeb的教材是由Books所組成，而一本書又由許多Chapter組成，每一個Chapter又由數個練習題組成。教材的編輯是使用為不同語言預備的範本（Template）以簡化編輯的程序。所以製作教材的流程是：</p></td>
+  </tr>
+  <tr class="style1">
+    <td width="3%" height="30"><p>1. </p></td>
+    <td colspan="3"><p>在登入PLWeb後，點選 <img src="img/49.PNG" alt="Materials" width="83" height="22" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td height="411" valign="top">2. </td>
+    <td colspan="3">點選 <img src="img/50.PNG" alt="Add New Book" />，之後輸入Content ID與Display Name：
+      <p></p>
+      <p class="style1"><img src="img/6.PNG" alt="Add New Book" width="369" height="260" /></p>
+      <p class="style1">由於有許多老師會製作教材，所以請取一個能夠識別您的教材的名稱（如加上：Tungsh）。由於書名會用來當作檔名，所以除了「_」之外不要使用其他特殊符號。</p></td>
+  </tr>
+  <tr class="style1">
+    <td rowspan="6" valign="top">3.</td>
+    <td colspan="3"><p>加入章節。這部份分以下幾個步驟：</p></td>
+  </tr>
+  <tr class="style1">
+    <td width="5%" height="135" valign="top">3-1.</td>
+    <td colspan="2"><p>點選書名（如：Java_Tungsh）</p>
+        <p><img src="img/51.PNG" width="557" height="88" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td>3-2.</td>
+    <td colspan="2">選擇該章節要使用的Template（如：Java）：</td>
+  </tr>
+  <tr class="style1">
+    <td>&nbsp;</td>
+    <td colspan="2"><img src="img/9.PNG" alt="Template" width="293" height="170" /></td>
+  </tr>
+  <tr class="style1">
+    <td height="35">3-3. </td>
+    <td colspan="2">點選 Edit <img width="16" height="16" src="img/10.PNG" /> (如果編輯器無法正常開啟，請關掉瀏覽器的proxy)</td>
+  </tr>
+  <tr class="style1">
+    <td height="113">&nbsp;</td>
+    <td colspan="2"><img src="img/11.PNG" alt="Edit" width="660" height="104" /></td>
+  </tr>
+  <tr class="style1">
+    <td height="29" valign="top">4.</td>
+    <td colspan="3">編輯練習題目</td>
+  </tr>
+  <tr class="style1">
+    <td height="442" valign="top">&nbsp;</td>
+    <td valign="top">4-1. </td>
+    <td colspan="2"><p>點選 <img width="16" height="16" src="img/10.PNG" />（edit）後，一個編輯器會下載至您的電腦，這個編輯器是編輯練習的主要工具。編輯Java練習用的template已經預備了一個包含三個檔案的範例，這個範例的三個檔案也被開啟了。其中<span class="style2">*.html檔</span>可用來編輯題目，<span class="style2">*.java檔</span>則用來編輯解答，<span class="style2">*.part檔</span>則是部份解答的提示，*.part檔不必每一題都提供內容，有需要部份解答的題目才需要提供。此外，執行這一題的Screen Dump也顯示出來。如下圖：</p>
+        <p><img src="img/52.PNG" width="459" height="321" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td height="418" valign="top">&nbsp;</td>
+    <td valign="top">4-2. </td>
+    <td colspan="2"><p>使用這個範例當作模版，來製作新的練習：例如將「Hello World!」改成「Hello Java! 」*.html檔也順便修改，存檔後按<img width="20" height="18" src="img\13.jpg" />執行該程式。對這一題來說，還不需要更改檔名。按Reload <img width="23" height="23" src="img\14.jpg" /> 可以看到更新後的Html  Viewer與Screen Dump的內容。第一題便完成了。</p>
+        <p><img src="img/53.PNG" width="459" height="321" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td valign="top">&nbsp;</td>
+    <td valign="top">4-3. </td>
+    <td colspan="2"><p>（Optional）如果需要，可以選擇用學生身份 <img width="62" height="30" src="img\15.jpg" /> 測試該程式，便可看到編輯器下方有如下畫面，test_ok代表測試通過。PLWeb使用程式的輸出來判斷程式是否通過測試。而在編輯練習的過程中，標準答案的輸出已經被自動保存，並用於學生程式輸出結果的比對。</p>
+        <p><img width="324" height="148" src="img\16.PNG" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td valign="top">&nbsp;</td>
+    <td valign="top">4-4. </td>
+    <td colspan="2"><p>編第二題。這一題則是使用上一題當作範本。請按 <img width="25" height="26" src="img\17.jpg" /> (add  exercise)，接著按 <img width="26" height="27" src="img\18.jpg" />(edit exercise)，然後在彈出的視窗內填入新練習的程式檔名 Good，Good將成為相關檔案的檔名。</p>
+        <p><img src="img/54.PNG" width="459" height="321" /></p>
+      <p><img width="236" height="114" src="img\19.jpg" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td height="32" valign="top">&nbsp;</td>
+    <td>4-5.</td>
+    <td colspan="2">接著便可以編輯這一題的相關檔案。</td>
+  </tr>
+  <tr class="style1">
+    <td height="276" valign="top">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td width="7%" valign="top">4-5-1.</td>
+    <td width="85%"><p>題目描述檔Good.html </p>
+        <p>&lt;html&gt;<br />
+          　　&lt;head&gt;<br />
+          　　　　&lt;meta http-equiv=&quot;Content-Type&quot;  content=&quot;text/html; charset=UTF-8&quot;&gt;<br />
+          　　&lt;/head&gt;<br />
+          　　&lt;body&gt;<br />
+          　　　　程式編輯區中的程式有誤，請修正後輸出：&lt;br&gt;<br />
+          　　　　I love Java!&lt;br&gt;<br />
+          　　　　Java is good!&lt;br&gt;<br />
+          　　　　&lt;br&gt;<br />
+          　　　　程式的輸出、入必須與下面Screen  Dump的內容一樣，才能通過測試。 <br />
+          　　&lt;/body&gt;<br />
+          &lt;/html&gt;</p></td>
+  </tr>
+  <tr class="style1">
+    <td height="246" valign="top">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td valign="top">4-5-2. </td>
+    <td><p>解答檔Good.java</p>
+        <p>public class Good {   <br />
+          　　public static void main  (String args[]) {  <br />
+          　　　　System.out.println(&quot;I  love Java!&quot;);       <br />
+          　　　　System.out.println(&quot;Java is so good!&quot;); <br />
+          　　}<br />
+          }</p>
+      <p>如果不提供解答檔，需將輸出的正確解答，利用該程式語言的輸出指令(Ex：System.out.println(正確解答);、printf(正確解答);、cout &lt;&lt; 正確解答 &lt;&lt; endl;)，讓PLWeb編輯器能夠在存檔後按<img width="20" height="18" src="img\13.jpg" />執行該程式記錄正確解答，用於學生程式輸出結果的比對。</p></td>
+  </tr>
+  <tr class="style1">
+    <td valign="top">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td valign="top">4-5-3. </td>
+    <td><p>部份解答（提示）檔Good.part</p>
+        <p>public class Good {<br />
+　　public static main (String  args[]) {<br />
+　　　　System.out.println(I love  Java!);<br />
+　　　　System.out.println(&quot;Java is so good！&quot;)<br />　　
+}<br />
+}</p></td>
+  </tr>
+  <tr class="style1">
+    <td valign="top">&nbsp;</td>
+    <td valign="top">4-6. </td>
+    <td colspan="2" valign="top">存檔並確認目前的身份是author。若不是則將將<img width="62" height="30" src="img\20.jpg" />改回author，再按 <img width="20" height="18" src="img\21.jpg" /> 以便執行並保存output。</td>
+  </tr>
+  <tr class="style1">
+    <td valign="top">&nbsp;</td>
+    <td valign="top"> 4-7.</td>
+    <td colspan="2" valign="top"><p>為本章命名，按 <img width="25" height="26" src="img\22.jpg" /> (edit  project) ，將Title改為 Hello Java! 然後按Confirm.</p>
+        <p><img src="img/55.PNG" width="459" height="321" /></p>
+      <p><img width="275" height="252" src="img\23.PNG" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td height="382" valign="top">&nbsp;</td>
+    <td valign="top">4-8.</td>
+    <td colspan="2" valign="top"><p>這一章只有兩題練習，因此可以按 <img width="27" height="26" src="img\24.jpg" /> (upload project) 上傳教材並結束這一章的編輯。</p>
+    <p><img src="img/56.PNG" width="459" height="321" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td valign="top">5.</td>
+    <td colspan="3" valign="top"><p>教材分享</p>
+      <p>設定Options選項，可以選擇是(y)或否(n)願意將教材分享給其他老師使用。</p>
+      <p><img src="img/57.PNG" width="662" height="81" /></p></td>
+  </tr>
+  <tr class="style1">
+    <td colspan="4" valign="top"><p><br />
+      PLWeb支援所有能夠在DOS Command Shell (cmd.exe)執行的程式語言。</p>
+        <p>PLWeb已經提供了用來製作C、C++、Java、Scheme、Ruby、Python等語言之練習的Templates。</p></td>
+  </tr>
+</table>
+</body>
+</html>

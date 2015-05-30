@@ -1,0 +1,18 @@
+a,a:hover {
+	color: #000088;
+	text-decoration: none;
+}
+
+a:hover {
+	background: #FFFFAA;
+}
+
+.item_bar {
+	text-align: center;
+}
+
+a.item {
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}

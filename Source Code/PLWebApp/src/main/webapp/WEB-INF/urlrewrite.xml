@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlrewrite>    
+	<rule match-type="wildcard">
+		<from>/**.g</from>
+		<to type="forward">/$1.groovy</to>
+	</rule>
+    <rule>
+        <from>/classroom/(.*)/$</from>
+        <to type="forward">/dashboard/index.groovy?m=show_class&amp;c=$1</to>
+    </rule>
+    <rule>
+        <from>/content/(.*)/(.*)/(.*)/$</from>
+        <to type="forward">/dashboard/index.groovy?m=show_lesson&amp;c=$1&amp;l=$2,$3</to>
+    </rule>
+</urlrewrite>
+

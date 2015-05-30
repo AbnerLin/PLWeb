@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PLWeb使用手冊-初始環境設定</title>
+<style type="text/css">
+<!--
+
+.style3 {color: #0000FF; font-weight: bold; font-size: 18px; }
+
+.style6 {font-size: 16px}
+
+.style7 {color: #FF0000}
+
+.style9 {font-size: 24px}
+
+.style10 {color: #0000FF; font-weight: bold; font-size: 24px; }
+
+.style12 {font-size: 16px; font-weight: bold; }
+
+-->
+</style>
+</head>
+
+<body>
+<table width="786" border="0" align="center">
+
+  <tr>
+
+    <td width="817"><span class="style12"></span>
+
+    <p align="left" class="style3 style9">以下是使用PLWeb的編輯器所需要的初始設定說明。完成安裝後，必須關掉全部的瀏覽器，然後重新開啟瀏覽器登入PLWeb，才能下載、執行PLWeb編輯器中的練習。</p>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<br />
+
+<table border="0" align="center"  style="border:3px dashed #490;" width="780">
+
+  <tr>
+
+    <th width="15" height="49">&nbsp;</th>
+
+  	<th width="30">&nbsp;</th>
+
+  	<th width="671">
+
+    <p align="center" class="style3 style9">安裝JDK</p>
+
+    </th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="2" valign="top" class="style6"><strong>1.</strong></td>
+
+    <td colspan="2" class="style6"><strong>先下載並安裝SUN JDK 1.5或1.6。</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="39" class="style6">&nbsp;</td>
+
+    <td class="style6"><p><a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">http://java.sun.com/javase/downloads/index.jsp</a><br />
+
+        <br />
+
+      </p>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6"><strong>2.</strong></td>
+
+    <td colspan="2" class="style6"><strong>設定PATH</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6"><p>我的電腦 &gt; 右鍵 &gt; 內容 &gt; 進階 &gt; 環境變數 &gt; 系統變數</p>
+
+	  <p>找到<span class="style7">PATH</span>按編輯，在原設定最前方加入以下路徑(須先確認路徑是否存在，分號是路徑之間的分隔符號，一定要加)。</p>
+
+      <p class="style7">C:\Program Files\Java\jdk1.6.0_12\bin;</p>
+
+      <p>PS：1.6.0_12視安裝版本而定。</p>
+
+      <p><img src="img/3.PNG" alt="設定PATH" /><br />
+
+        <br />
+
+      </p></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6"><strong>3.</strong></td>
+
+    <td colspan="2" class="style6"><strong>設定CLASSPATH</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6"><p>我的電腦 &gt; 右鍵 &gt; 內容 &gt; 進階 &gt; 環境變數 &gt; 系統變數</p>
+
+	  <p>找到或新增<span class="style7">CLASSPATH</span>按編輯，在原設定最前方加入以下路徑(須先確認路徑是否存在，分號是路徑之間的分隔符號，一定要加)。</p>
+
+	  <p class="style7">.;C:\Program Files\Java\jdk1.6.0_12\lib;</p>
+	  
+	  <p>PS：1.6.0_12視安裝版本而定。</p>
+
+      <p><img src="img/4.PNG" alt="設定CLASSPATH" /><br />
+
+        <br />
+
+      </p>	</td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6"><strong>4.</strong></td>
+
+    <td colspan="2" class="style6"><strong>驗證設定</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td height="271" class="style6">&nbsp;</td>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6">打開DOS視窗, 輸入<span class="style7">javac  -version</span>看是否有正確提示版本。
+
+	  <p><img src="img/5.PNG" alt="驗證設定" /><br />
+
+	    <br />
+
+	  </p>	</td>
+
+  </tr>
+
+  <th colspan="3">
+
+    <p align="center" class="style10">完成以上的步驟後(必須關掉並重新開啟瀏覽器)，即可下載PLWeb的編輯器學習Java(若不能下載編輯器，請關掉瀏覽器的proxy)。</p>
+
+    </th>
+
+</table>
+
+
+
+<table border="0" align="center" style="border:3px dashed #490;" width="780">
+
+  <tr>
+
+    <th height="55" colspan="3"><p align="center" class="style10">如果要學習其他語言（如C/C＋＋），請參考以下安裝編輯器的範例</p>
+
+    </th>
+
+  </tr>
+
+  <tr>
+
+    <td width="14" rowspan="2" valign="top" class="style6"><p><strong>1.</strong></p></td>
+
+    <td colspan="2" class="style6"><strong>先安裝Dev C++（VISTA users需安裝 MinGW-5.1.3，請見第4點）</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="20" class="style6">&nbsp;</td>
+
+    <td width="734" class="style6">
+
+	  <p>      Dev-C++ 5.0 beta 9.2 (4.9.9.2)  (9.0 MB) with Mingw/GCC 3.4.2</p>
+
+    <p><a href="http://www.bloodshed.net/dev/devcpp.html" target="_blank">http://www.bloodshed.net/dev/devcpp.html</a><br />
+
+      <br />
+
+    </p>    </td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="2" valign="top" class="style6"><p><strong>2.</strong></p></td>
+
+    <td colspan="2" class="style6"><strong>設定PATH</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6"><p>我的電腦 &gt; 右鍵 &gt; 內容 &gt; 進階 &gt; 環境變數 &gt; 系統變數</p>
+
+      <p>找到<span class="style7">PATH</span>按編輯, 在原設定最前方加入以下路徑(須先確認路徑是否存在, 分號是路徑之間的分隔符號, 一定要加)</p>
+
+      <p class="style7">C:\DEV-C++\Bin;</span></p>
+
+      <p><img src="img/1.PNG" alt="設定PATH" width="419" height="456" /><br />
+
+        <br />
+
+      </p>	</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="2" valign="top" class="style6"><strong>3.</strong></td>
+
+    <td colspan="2" class="style6"><strong>驗證設定</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6"><p>打開DOS視窗, 輸入<span class="style7">gcc  --version</span>看是否有正確提示版本</p>
+
+    <p><img src="img/2.PNG" alt="驗證設定" /><br />
+
+      <br />
+
+    </p></td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="2" valign="top" class="style6"><strong>4.</strong></td>
+
+    <td colspan="2" class="style6"><strong>for VISTA users:</strong></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="style6">&nbsp;</td>
+
+    <td class="style6"><p>請下載 <a href="http://downloads.sourceforge.net/mingw/MinGW-5.1.3.exe?modtime=1168811236&big_mirror=1" target="_blank">MinGW-5.1.3</a>, 
+
+安裝至 C:\MinGW, 將PATH設定加上 C:\MinGW\bin;C:\MinGW\libexec\gcc\mingw32\3.4.5; (請加在最前面)</br>
+
+    </p></td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>
+

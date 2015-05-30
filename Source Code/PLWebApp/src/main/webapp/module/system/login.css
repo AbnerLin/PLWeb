@@ -1,0 +1,18 @@
+div#system-login-container div.news {
+	padding: 1em;
+}
+
+div#system-login-container div.news p {
+	font-size: 1.1em;
+	line-height: 1.6em;
+}
+
+div#system-login-container div.news img.news-cover {
+	float: right;
+	padding: 1em;
+}
+
+div#system-login-container input.field {
+	width: 20em;
+	font-size: 1.5em;
+}

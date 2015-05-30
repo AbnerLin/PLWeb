@@ -1,0 +1,27 @@
+plugin.org.plweb.jedit.CompilerPlugin.name=PLWebEdit
+plugin.org.plweb.jedit.CompilerPlugin.description=PLWeb Editor Plugin
+plugin.org.plweb.jedit.CompilerPlugin.author=lyhcode
+plugin.org.plweb.jedit.CompilerPlugin.activate=startup
+plugin.org.plweb.jedit.CompilerPlugin.version=1.0
+plugin.org.plweb.jedit.CompilerPlugin.depend.0=jdk 1.5
+plugin.org.plweb.jedit.CompilerPlugin.depend.1=jedit 04.04.01.00
+
+infoviewer.title=Info
+infoviewer.dock-position=left
+infoviewer.extendedState=0
+
+compiler.title=Message Console
+compiler.label=Compile
+compiler-run.label=Run
+compiler-interrupt.label=Interrupt
+compiler.msg0.0=Running... (%s)
+compiler.msg0.1=Stop... (%s)
+compiler.dialog0.title=Error!
+compiler.dialog0.message=Interrupt the current program first!
+compiler.dialog1.title=Error!
+compiler.dialog1.message=No program is running!
+compiler.dock-position=bottom
+compiler.extendedState=0
+compiler-run.icon=jeditresource:/plwebedit-1.0.jar!/compiler-run.png
+compiler-interrupt.icon=jeditresource:/plwebedit-1.0.jar!/compiler-interrupt.png
+

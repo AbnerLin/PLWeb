@@ -1,0 +1,46 @@
+.prettyhtml {
+	font-size: 15px;
+	color: #333333;
+}
+
+.prettyhtml p {
+	line-height: 1.8em;
+}
+
+.prettyhtml code, .prettyhtml pre {
+	color: #000000;
+	font-size: 13px;
+	line-height: 1.4em;
+	background-color: #f6f6f6;
+	font-family: Courier, 'Courier New', monospace;
+	padding: 2px;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	overflow: auto;
+}
+
+.prettyhtml li {
+	line-height: 1.4em;
+}
+
+.prettyhtml img {
+	border:0;
+}
+
+.prettyhtml a {
+	color: #0000ff;
+	text-decoration: none;
+}
+
+.prettyhtml h1 {
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-bottom: .4em;
+}
+
+.prettyhtml h2 {
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-top: .8em;
+	margin-bottom: .2em;
+}

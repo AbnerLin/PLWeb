@@ -1,0 +1,114 @@
+.class-html-editor {
+	display: none;
+}
+
+.class-html-textarea {
+	width: 100%;
+}
+
+.textarea-container {
+	display: block;
+}
+
+.class-control-height {
+	text-align: right;
+}
+
+.class-html-string {
+	
+}
+
+.class-html-content:hover {
+	background-color: #fafafa;
+}
+
+.class-control {
+	float: right;
+}
+
+.class-control-height span {
+	font-family: Courier;
+	font-size: 22px;
+	text-height: 1em;
+	font-weight: bold;
+	color: #333333;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.class-control-height span:hover {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.class-control-advanced {
+	float: left;
+}
+
+.class-control-advanced span {
+	font-size: 13px;
+	font-weight: bold;
+	padding: 5px;
+	cursor: pointer;
+	color: #6d6d6d;
+}
+
+.class-control-advanced span:hover {
+	background-color: #fafab6;
+	color: #000000;
+}
+
+.jHtmlArea iframe {
+	border: 1px solid #aaaaaa;
+}
+
+.class-student-list {
+	line-height: 160%;
+}
+
+.class-student-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.class-student-list li {
+	display: inline;
+	padding: 2px;
+	background-color: #fafafa;
+}
+
+.class-student-list .name {
+	color: #3b230d;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.class-display {
+	border: 1px solid #ffffff;
+}
+
+.class-display:hover {
+	border: 1px solid #e6e2d2;
+}
+
+.class-display-title {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+	color: #807c79;
+	cursor: pointer;
+}
+
+.class-display-title:hover {
+	color: #ffffff;
+	background-color: #e6e2d2;
+}
+
+.class-display-content {
+	background-color: #ffffff;
+}
+
+.class-toolbar-control {
+	padding: 5px;
+}

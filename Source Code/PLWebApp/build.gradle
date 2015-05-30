@@ -1,0 +1,84 @@
+apply plugin: 'jetty'
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedRuntime 'org.mortbay.jetty:jetty-ajp:6.1.26'
+
+    // Servlet & JSP
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    providedCompile 'javax.servlet:jsp-api:2.0'
+    
+    // Spring
+    runtime 'org.springframework:spring-web:2.5.6'
+
+    // Groovy
+    compile 'org.codehaus.groovy:groovy-all:1.8.4'
+    compile 'antlr:antlr:2.7.7'
+    compile 'asm:asm:3.3.1'
+    
+    // Ant
+    compile 'org.apache.ant:ant:1.8.2'
+    compile 'org.apache.ant:ant-launcher:1.8.2'
+
+    // Jarkata (apache)
+    compile 'commons-beanutils:commons-beanutils:1.8.3'
+    compile 'commons-collections:commons-collections:3.2.1'
+    compile 'commons-fileupload:commons-fileupload:1.2.2'
+    compile 'commons-httpclient:commons-httpclient:3.1'
+    compile 'commons-io:commons-io:2.1'
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'commons-logging:commons-logging:1.1.1'
+    compile 'commons-net:commons-net:3.0.1'
+    
+    // JavaMail
+    compile 'com.sun.mail:dsn:1.4.4'
+    compile 'javax.mail:mail:1.4.4'
+    compile 'javax.activation:activation:1.0.2'
+
+    // jFreeChart
+    compile 'jfree:jcommon:1.0.16'
+    compile 'jfree:jfreechart:1.0.13'
+
+    compile 'net.tanesha.recaptcha4j:recaptcha4j:0.0.7'
+    compile 'net.sourceforge.nekohtml:nekohtml:1.9.15'
+    // compile 'net.sf.json-lib:json-lib:2.4'
+
+    // Url Rewrite Filter 3.2.0 (http://www.tuckey.org/urlrewrite/)
+    runtime 'org.tuckey:urlrewritefilter:3.2.0'
+    
+    // Database
+    runtime 'commons-dbcp:commons-dbcp:1.4+'
+    runtime 'mysql:mysql-connector-java:5.1.18'
+
+    // PLWeb Libraries
+    runtime files ('../PLWebXML/build/libs/plwebxml-1.0.jar')
+	
+	// JSON 20140625
+	runtime files ('../PLWebStart/lib/json-simple-1.1.1.jar')
+}
+
+def defaultEncoding = 'UTF-8'
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.options*.encoding = defaultEncoding
+[compileGroovy, compileTestGroovy]*.groovyOptions*.encoding = defaultEncoding
+
+[jettyRun, jettyRunWar]*.with {
+    contextPath = ''
+    //jettyConfig = new File('src/main/resources/jetty.xml')
+    //additionalRuntimeJars = sourceSets.main.runtimeClasspath
+    //reload='automatic'
+    //jettyEnvXml = file('src/test/resources/jetty-jndi.xml')
+    //jettyConfig= file('src/test/resources/jetty-config.xml')
+    //webAppSourceDirectory = file('WebContent')
+    //httpPort = 8080
+    //daemon = true
+}
+

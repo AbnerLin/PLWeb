@@ -1,0 +1,50 @@
+/* Customization begin */
+.page {
+	margin: 1em;
+	font-size: 13px;
+}
+
+.page h1 {
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 200%;
+}
+
+.page h2 {
+	font-size: 125%;
+	font-weight: bold;
+	line-height: 150%;
+}
+
+.page a {
+	text-decoration: none;
+	color: blue;
+}
+
+.page a:hover {
+	text-decoration: underline;
+}
+
+.page th {
+	text-align: center;
+	font-weight: bold;
+	background: black;
+	color: white;
+	padding: 3px;
+	font-size: 13px;
+}
+
+.page td {
+	font-size: 13px;
+	padding: 2px;
+}
+
+.page tr.odd {
+	background: #eeeeee;
+}
+
+.page tr.even {
+
+}
+
+

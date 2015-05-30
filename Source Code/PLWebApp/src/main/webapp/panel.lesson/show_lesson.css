@@ -1,0 +1,39 @@
+.panel-lesson-show-lesson {
+}
+
+.panel-lesson-show-lesson .editsection {
+	display: none;
+}
+
+.lesson-toolbar-date {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 15px;
+	color: #666666;
+}
+
+.lesson-toolbar-date img {
+	vertical-align: middle;
+}
+
+.lesson-toolbar-date a {
+	text-decoration: none;
+}
+
+.lesson-toolbar-date .datetime {
+	color: #333333;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.lesson-toolbar-date .datetime:hover {
+	color: #000000;
+	background-color: yellow;
+}
+
+.lesson-toolbar-control {
+	padding: 10px;
+}
+
+.lesson-answer-panel {
+	display: none;
+}

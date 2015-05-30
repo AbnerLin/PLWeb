@@ -1,0 +1,101 @@
+html {
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+h1 {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.2em;
+	color: #6f0a0a;
+}
+
+h2 {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 1em;
+	color: #ca5d22;
+	margin:.2em;
+	padding:0;
+	line-height:1em;
+}
+
+ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+li {
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #cccccc;
+}
+
+li span {
+	color: #333333;
+	font-size: 13px;
+}
+
+li span a {
+	text-decoration: none;
+	color: #3a1616;
+}
+
+li img {
+	float: left;
+	margin: 5px;
+	padding: 3px;
+	border: 1px solid #cccccc;
+}
+
+.control-set {
+	text-align: right;
+	color: #999999;
+}
+
+.control-set a {
+	text-decoration: none;
+	color: #6a6a6a;
+	font-size: 13px;
+}
+
+.control-set a.import {
+	color: #0000ff;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.footer {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	padding: 5px;
+	font-size: 13px;
+	color: #9c8d88;
+	text-align: center;
+}
+
+form label {
+	font-family: Verdana, Arial, Tahoma, Helvetica, Geneva;
+	font-size: 13px;
+}
+
+form .text-field {
+	border:0;
+	border-bottom: 1px solid #aaaaaa;
+	background-color: #feffe0;
+}
+
+form {
+	padding:0;
+	margin:0;
+	line-height: 1.8em;
+}
+
+iframe {
+	width: 98%;
+	border: 1px solid #aaaaaa;
+	overflow: scroll-no;
+}

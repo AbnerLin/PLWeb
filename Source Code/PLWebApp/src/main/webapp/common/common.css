@@ -1,0 +1,133 @@
+.div-clear {
+	clear: both;
+}
+
+.div-hide {
+	display: none;
+}
+
+.maxdoc {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.control-button img {
+	vertical-align: middle;
+	border: 0;
+}
+
+div.go-grid-pagebar 
+{
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 10px;
+}
+
+a.go-grid-pagebar-pagelink 
+{
+	color: #555555;
+	font-weight: bold;
+	padding: 0 5px;
+	text-decoration: none;
+}
+
+span.go-grid-pagebar-pagelink 
+{
+	font-size: 1.2em;
+	color: #000000;
+	font-weight: bold;
+	padding: 0 5px;
+	text-decoration: none;
+}
+
+/* HTML Styles */
+
+div.webface-container {
+}
+
+table.webface-table-default
+{
+	/*width: 100%;*/
+	border:1px solid #cccccc;
+}
+
+table.webface-table-default th 
+{
+	background-color: #cfd8e6;
+	font-weight: normal;
+}
+
+table.webface-table-default th a 
+{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+table.webface-table-default td
+{
+	padding: .3em .1em;
+}
+
+table.webface-table-default td.odd
+{
+	background-color:#eeeeee;
+}
+
+table.webface-table-default td.even
+{
+	background-color:#dddddd;
+}
+
+table.webface-table-default th.sortable-asc
+{
+	background-repeat: no-repeat;
+	background-image: url('../lib/img/sortable-asc.gif');
+	background-position: right center;
+}
+
+table.webface-table-default th.sortable-desc
+{
+	background-repeat: no-repeat;
+	background-image: url('../lib/img/sortable-desc.gif');
+	background-position: right center;
+}
+
+table.webface-table-default th.sortable
+{
+	background-repeat: no-repeat;
+	background-image: url('../lib/img/sortable.gif');
+	background-position: right center;
+}
+
+table.webface-table-default tr.go-list th
+{
+	font-size: 1em;
+}
+
+table.webface-table-default tr.go-list-header th 
+{
+	font-weight: bold;
+}
+
+table.webface-table-default tr.go-list-required th
+{
+	font-weight: bold;
+}
+
+table.webface-table-default tr.go-list-required th span.go-list-mark
+{
+	color: red;
+}
+
+table.webface-table-default tr.go-list td .textbox 
+{
+	/*width: 100%;*/
+}
+
+hr.webface-breaker-default
+{
+	border:0;
+	margin:0;
+	padding:0;
+}

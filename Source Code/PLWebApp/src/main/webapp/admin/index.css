@@ -1,0 +1,7 @@
+ul.menu-list {
+	list-style-type: square;
+	padding: 1em;
+}
+ul.menu-list li {
+	line-height: 1.5em;
+}

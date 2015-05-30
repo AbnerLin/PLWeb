@@ -1,0 +1,120 @@
+html {
+	max-height:100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #333333;
+	font-size: 13px;
+	max-height:100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.div-clear {
+	clear: both;
+}
+
+.plweb-schedule-PageTitle {
+	height: 48px;
+	background-repeat: no-repeat;
+	background-image: url('../img/schedule_title.png');
+}
+
+.plweb-schedule-PageHeader {
+	
+}
+
+.plweb-schedule-PageSeperator {
+	color: #888888;
+	width: 100%;
+	background-color: #000000;
+	text-align: center;
+	cursor: pointer;
+}
+
+.plweb-schedule-PageSeperator:hover {
+	color: #aaaaaa;
+}
+
+.plweb-schedule-PageBody {
+/*	height: 100%;*/
+	border:1px solid green;
+}
+
+h1 {
+	font-family: Arial;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px;
+	font-size: 20px;
+	color: #aaaaaa;
+	display: none;
+}
+
+div.plweb-schedule-BookCategory {
+	float: left;
+	margin-left: 10px;
+	width: 150px;
+}
+
+ul.plweb-schedule-VerticalTabPanel {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+li.plweb-schedule-VerticalTabPanelLabel {
+	text-align: right;
+	color: #aaaaaa;
+	margin-bottom: 2px;
+	font-size: 15px;
+	color: #cccccc;
+	cursor: pointer;
+}
+
+li.plweb-schedule-VerticalTabPanelLabel:hover {
+	color: #eeeeee;
+}
+
+li.plweb-schedule-VerticalTabPanelLabel.selected {
+	background-color: #444444;
+	background-repeat: no-repeat;
+	background-image: url('../img/label_bg01_left_32h.png');
+	color: #ffffff;
+	font-weight: bold;
+}
+
+li.plweb-schedule-VerticalTabPanelLabel span {
+	width: 150px;
+	height: 32px;
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: 15px;
+}
+
+div.plweb-schedule-BookFrame {
+	background-color: #444444;
+	margin-left: 160px;
+	height: 280px;
+}
+
+div.plweb-schedule-BookFrame iframe {
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div.plweb-schedule-BookPreview {
+	height: 100%;
+}
+
+div.plweb-schedule-BookPreview iframe {
+	border: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}

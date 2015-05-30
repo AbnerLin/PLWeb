@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE ACTIONS SYSTEM "actions.dtd">
+<ACTIONS>
+	<ACTION NAME="compiler-run">
+		<CODE>
+            dm = view.getDockableWindowManager();
+            dm.getDockable("compiler").run();
+		</CODE>
+	</ACTION>
+    <ACTION NAME="compiler-interrupt">
+        <CODE>
+	        dm = view.getDockableWindowManager();
+	        dm.getDockable("compiler").interrupt();
+        </CODE>
+    </ACTION>
+</ACTIONS>

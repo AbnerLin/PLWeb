@@ -1,0 +1,44 @@
+body{
+        font-family: '微軟正黑體';
+        font-weight: bold;
+        text-align: center;
+}
+#grade_setting{
+        border: 1px solid #000;
+        width: 60%;
+        margin: auto;
+        margin-top: 50px
+}
+#grade_setting td{
+        border: 1px solid #000;
+        padding: 5px 0 5px 0;
+}
+#grade_setting{
+        text-align: center;
+}
+input{
+        width: 50px;
+}
+a {
+        line-height: 20px;
+        display: inline-block;
+        margin-left: 15px;
+        /*margin-right: -10px;*/
+        margin-top: 5px;
+        height: 20px;
+        width: 80px;
+        border: 1px #AAA solid;
+        background-color: lightgrey;
+        font-size: 14px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        opacity: 0.8;
+        -moz-box-shadow: 0px 0px 5px #999999;
+        -webkit-box-shadow: 0px 0px 5px #999999;
+        box-shadow: 0px 0px 5px #999999;
+        -moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+        border-radius: 5px;
+
+}
