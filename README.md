@@ -1,5 +1,4 @@
 # PLWeb
-OS: Ubuntu 11.10 or lastest version  
 Web Server: Tomcat 6 or latest version  
 Database: Mysql 5.x or latest version  
 
