@@ -1,3 +1,5 @@
+Stop update, please follow https://github.com/tungshuan/PLWeb
+
 # PLWeb
 Web Server: Tomcat 6 or latest version  
 Database: Mysql 5.x or latest version  
