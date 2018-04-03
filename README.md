@@ -1,59 +1,46 @@
-Stop update, please follow https://github.com/tungshuan/PLWeb
-
 # PLWeb
-Web Server: Tomcat 6 or latest version  
-Database: Mysql 5.x or latest version  
+## 提升教學成效
 
-## Tomcat  
-設定檔位置(預設): /var/lib/tomcat/conf/server.xml
-資料庫連接設定: /var/lib/tomcat/conf/Catalina/localhost/ROOT.xml
+PLWeb是一個包含以下功能，而且能同時支援「電腦教室授課」及「課後自行練習」，並讓教學更有效率的程式設計練習系統。PLWeb支援的功能包括：
+1. **學習用程式編輯器**：幫助學生以 learn by coding 的方式高效學習； 
+2. **上機考試系統**：支援自動評分，可以頻繁的每2～3週便上機考試，以督促學生跟上進度； 
+3. **練習題製作工具**：幫助教師有效率的自行設計教材、練習題及考題; 
+4. **班級經營與管理工具**：包括教材管理、課程管理、公佈欄、討論區、練習狀態顯示、查看學生程式碼及成績統計等功能； 
+5. **練習題庫及配套教材**：Java, C, JavaScript 與 Scheme 都各有約150題以上的題目，幫助學生大量練習，其他語言的教材也在陸續製作中； 
+6. **適性化練習系統**：讓有特殊需要的班級，可以因著學生經驗的不同，練習不同數量的練習； 
+7. **支援多種程式語言**：支援任何可以在Windows作業系統「命令提示視窗」(cmd.exe) 中執行的程式語言。 
 
-* 先配置server.xml，以下為範例，還須依照環境需求修改。
-```
-<Service name="Catalina">
-    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"  
-      enableLookups="false" URIEncoding="UTF-8" connectionTimeout="60000"  
-      acceptCount="1000" maxThreads="1000" />
-    <Engine name="Catalina" defaultHost="localhost">
-        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
-             resourceName="UserDatabase"/>
-        <Host name="localhost"  appBase="webapps"  
-          unpackWARs="true" autoDeploy="true"  
-          xmlValidation="false" xmlNamespaceAware="false">
-        </Host>
-    </Engine>
-</Service>
-```
-## MySQL
-依照需求請自建MySQL的帳號與密碼，詳細請參考[MySQL Document](http://dev.mysql.com/doc/)，帳號建立完成後，請建立資料庫，名為PLWeb，之後將[Schema](https://github.com/AbnerLin/PLWeb/blob/master/plweb.sql)匯入。
+這些功能降低了教師講授的比重，並讓學生能更有效的練習寫程式。因而讓「教」與「學」都事半功倍。
 
-##Deploy
-Tomcat與MySQL都設定完成後，將[ROOT.war](https://github.com/AbnerLin/PLWeb/blob/master/ROOT.war)複製至Tomcat的網頁資料夾處(預設為/var/lib/tomcat/webapps/)，並修改tomcat的資料庫設定檔(預設為/var/lib/tomcat/conf/Catalina/localhost/ROOT.xml)，都設定完成後，重啟Tomcat，即完成。
+## 學習用程式編輯器
+PLWeb的學習用程式編輯器是與學習者互動最多的部份。這個編輯器是從一個以Java撰寫的開放源碼程式編輯器──jEdit，修改並延伸而來。程式編輯器中包含四個區域，教材及題目描述區（左上）、編輯區（右上）、輸出樣本區（左下）、以及測試區（右下）：
+![image1](http://help.plweb.org/_media/plweb-editor.png)
 
-* ROOT.xml範例，還須依照環境需求修改。
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<Context>
-    <Resource
-      name="jdbc/plweb"
-      auth="Container"
-      type="javax.sql.DataSource"
-      username="UserName"
-      password="PassWord"
-      driverClassName="com.mysql.jdbc.Driver"
-      url="jdbc:mysql://localhost/plweb?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;autoReconnectForPools=true"
-      testOnBorrow="true"
-      testOnReturn="true"
-      validationQuery="SELECT 1"
-      maxActive="200"
-      maxIdle="100"
-      maxWait="-1"
-      initialSize="10"
-      minEvictableIdleTimeMillis="600000"
-      timeBetweenEvictionRunsMillis="600000"
-      removeAbandoned="true"
-      removeAbandonedTimeout="60"
-      logAbandoned="true"
-    />
-</Context>
-```
+如果該題目提供部分解答，則部分解答會被自動的載入編輯區中。而學生可以將編輯區中的內容以填入空格、延伸功能或自行全部編寫的方式來完成練習題。當學生在網頁中按下某一教材之「開始練習」按鈕時，系統便會將編輯器伴隨著一組練習題從伺服器下載到客戶端。學生可以依照題目的描述，以及輸出樣本區的內容，在編輯區中開始練習。學生若按下「執行」按鈕，編輯器就會呼叫預先安裝在學生電腦中的編譯器，將編輯區中的程式進行編譯與執行。之後，編輯器會自動比對學生程式的輸出和輸出樣本區的內容是否相同，以判斷學生的程式是否通過測試。而測試的結果會被自動地送至伺服器的資料庫中，供教師與學生查看。
+
+在結束一題練習題的撰寫及測試之後，學生可以按「Next」按鈕，繼續練習。這種設計可以讓學生以循序漸進的方式，一題接著一題的學習程式設計，而不需要浪費時間預備接下來練習每一題時所需要的作業環境。此外，有些題目也可以提供部分解答，因此能幫助學生把注意力集中在主要概念的學習，而不需要分心於次要的程式語法或其它細節上，提升了學習成效。又由於編輯器是在學生端的電腦上執行，因此也可以不受網路連線速度的影響。
+
+## 練習狀態顯示 
+
+以完成進度鼓勵學生的練習狀態顯示圖
+![image2](http://help.plweb.org/_media/progress.png)
+
+幫助教師瞭解全班學生的練習進度、練習次數與完成速度的顯示圖，教師也可以點選某個題目，檢視學生的程式碼：
+![image3](http://help.plweb.org/_media/class.png)
+
+## 練習題製作工具
+
+程式編輯器不僅可以讓學生練習程式設計，還可以協助教師製作練習題。當程式編輯器處於作者模式時，它會在編輯區中同時開啟三個頁籤：題目描述、解答以及部分解答。教師可以任意切換並編輯這三個頁籤的內容。當教師按下「執行」按鈕後，便可以在「命令提示視窗」中輸入測試資料。而「命令提示視窗」中的內容會自動地被儲存起來，當作輸出樣本區的內容。此外，為了預備上機考試的試題，教師也可以開啟編輯隱藏式測試案例的頁籤。如果程式編輯器發現有隱藏式測試案例的檔案存在，則編輯器也會將隱藏式測試案例中的資料當成程式的輸入資料，並且將相對應的輸出結果加密。在結束練習題的建立之後，練習題作者可以按「Next」按鈕，繼續建立下一題練習。在完成所有的練習題之後，可以按下「上傳」按鈕，將練習題打包並上傳至伺服器。
+
+## 上機考試功能
+
+PLWeb也提供了容易實施的上機考試功能。教師可以預備經過加密，並且提供配分方式的隱藏式測試案例。學生在通過輸出樣本區的測試要求後，可以接著按下「提交」按鈕。這時隱藏式的測試案例，便會進一步的檢測學生的程式是否確實達到題目的要求，而不只是以使用printf或其它不合題目要求的方式印出輸出樣本區的答案。PLWeb的上機考試功能讓學生在監考人員的巡視下無法作弊。上機考試在Windows作業系統的實現方式，是藉著下載的程式編輯器在使用者端取得系統權限後，便將所有視窗桌面上的程式全部關閉。而為了防止學生使用Ctrl-Alt-Delete三鍵同時按下，並使用工作管理員自行啟動其他軟體，程式編輯器會每隔一秒便自動關閉可能已被啟動的工作管理員。這個方式讓學生除了使用仍然與主機相連的程式編輯器外，沒有任何其他的應用程式可以使用，因而得到了一個簡易、容易使用而且實施成本低的上機考試環境。
+
+## 參考文獻
+1. [Sho-Huan Tung, Tsung-Te Lin, and Yen-Hung Lin, 2013, An exercise management system for teaching programming. Journal of Software, Vol.8, No.7, pp.1718-1725.](http://help.plweb.org/_media/9098-23098-1-pb.pdf)
+2. [董少桓, 林紹陽, 曾筱倩, 2015, 一個支援頻繁上機考試的程式練習系統, NCS2015全國計算機會議, 2015/12/18, 屏東。](http://help.plweb.org/_media/ncs2015_programming_online_exam.pdf)
+3. [董少桓, 林紹陽, 林宗德,曾筱倩, 2015, 一個支援適性化學習的程式設計練習系統, 第十一屆台灣數位學習發展研討會, 2015/11/12, 高雄。](http://help.plweb.org/_media/twelf2015%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E9%81%A9%E6%80%A7%E5%AD%B8%E7%BF%92final.pdf)
+
+## 獎勵與輔助資訊
+1. 董少桓, 104年度資策會創新前瞻技術研究計畫──程式設計線上實作技術研發, 資訊工業策進會。
+2. 林宗德, 董少桓, 2006, Java程式設計教學平台(最佳論文獎), 第十七屆物件導向技術及應用研討會, 2006/09/12, 台北, 長庚大學, C3-4。
